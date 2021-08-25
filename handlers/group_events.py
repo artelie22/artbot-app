@@ -26,7 +26,14 @@ async def on_user_join(message: types.Message):
                                           permissions=types.ChatPermissions(True),
                                           until_date=int(time()) + int(config.groups.new_users_nomedia))'''
 
-    await utils.write_log(message.bot, "Присоединился пользователь "+utils.user_mention(message.from_user), "Новый участник")
+    await message.bot.send_message(config.groupa.main("Присоединился пользователь "+utils.user_mention(message.from_user), "Новый участник"))
+
+@dp.message_handler(user_id = int(config.bot.owner), commands="msg", commands_prefix="!/")Ll
+	await message.bot.send_message(config.groups.main))
+0
+
+
+
 
 @dp.message_handler(is_admin=False, chat_id=config.groups.main)
 @dp.edited_message_handler(is_admin=False, chat_id=config.groups.main)
