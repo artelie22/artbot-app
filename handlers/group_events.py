@@ -16,12 +16,12 @@ async def on_user_join(message: types.Message):
 
     :param message: Service message "User joined group
     """
-
+0
     # remove invite message
-    await message.delete()
+    '''await message.delete()
 
     # restrict media for new users
-    '''await message.bot.restrict_chat_member(chat_id=config.groups.main,
+    await message.bot.restrict_chat_member(chat_id=config.groups.main,
                                           user_id=message.from_user.id,
                                           permissions=types.ChatPermissions(True),
                                           until_date=int(time()) + int(config.groups.new_users_nomedia))'''
